@@ -1,4 +1,4 @@
-Symfony Standard Edition
+Symfony 3.4. - Address Book
 ========================
 
 **WARNING**: This distribution does not support Symfony 4. See the
