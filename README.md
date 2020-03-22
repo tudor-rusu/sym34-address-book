@@ -1,6 +1,29 @@
 Symfony 3.4. - Address Book
 ========================
 
+This project is about developing an address book in which you can add, edit and delete entries. The project should also have an overview of all contacts.
+
+**Project Requirements**  
+The address book should contain the following data:
+* Firstname
+* Lastname
+* Street and number
+* Zip
+* City
+* Country
+* Phonenumber
+* Birthday
+* Email address
+* Picture (optional)
+
+The project must use the following techniques:
+* Symfony 3.4
+* Doctrine with SQLite
+* Twig
+* PHP 7.2
+
+
+
 **WARNING**: This distribution does not support Symfony 4. See the
 [Installing & Setting up the Symfony Framework][15] page to find a replacement
 that fits you best.

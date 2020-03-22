@@ -2,7 +2,7 @@
     "name": "symfony/framework-standard-edition",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Simple Address Book with Symfony 3.4.*",
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
