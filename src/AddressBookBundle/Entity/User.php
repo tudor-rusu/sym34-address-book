@@ -3,6 +3,8 @@
 namespace AddressBookBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -10,6 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AddressBookBundle\Repository\UserRepository")
+ * @UniqueEntity(fields={"email", "username"}, message="This one is already taken.")
  */
 class User implements UserInterface
 {
@@ -33,6 +36,7 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @Assert\Email()
      */
     private $email;
 
