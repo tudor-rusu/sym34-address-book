@@ -1,3 +1,13 @@
+## [0.2.0] - 2020-03-23
+
+### Added
+- implement Login/Logout mechanism
+
+### Modified
+- composer.json and composer.lock
+- AppKernel.php
+- update menu
+
 ## [0.1.1] - 2020-03-23
 
 ### Added
