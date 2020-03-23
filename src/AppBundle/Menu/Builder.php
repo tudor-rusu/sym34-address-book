@@ -2,23 +2,46 @@
 
 namespace AppBundle\Menu;
 
+use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
-use Knp\Menu\MenuFactory;
-use Knp\Menu\MenuItem;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Security\Core\User\User;
 
-class Builder
+class Builder implements ContainerAwareInterface
 {
+    private $container;
+
     /**
-     * @param MenuFactory $factory
-     * @param array       $options
+     * @param FactoryInterface $factory
+     * @param array            $options
      *
-     * @return ItemInterface|MenuItem
+     * @return ItemInterface
      */
-    public function mainMenu(MenuFactory $factory, array $options) {
+    public function mainMenu(FactoryInterface $factory, array $options)
+    {
         $menu = $factory->createItem('root');
         $menu->setChildrenAttribute('class', 'nav navbar-nav');
         $menu->addChild('Home', ['route' => 'homepage']);
-        $menu->addChild('Login', ['route' => 'login']);
+
+        $em = $this->container->get('doctrine')->getManager();
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+
+        if (is_object($user)) {
+            $menu->addChild('Logout', ['route' => 'logout']);
+        } else {
+            $menu->addChild('Login', ['route' => 'login']);
+        }
+
         return $menu;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->container = $container;
     }
 }
