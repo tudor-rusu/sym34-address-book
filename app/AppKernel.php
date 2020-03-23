@@ -1,6 +1,7 @@
 <?php
 
 use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
+use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
 use Knp\Bundle\MenuBundle\KnpMenuBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
@@ -21,7 +22,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new AddressBookBundle\AddressBookBundle(),
             new KnpMenuBundle(),
-            new DoctrineFixturesBundle()
+            new DoctrineFixturesBundle(),
+            new DoctrineMigrationsBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
