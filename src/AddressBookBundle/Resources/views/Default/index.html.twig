@@ -1,21 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 {% endblock %}
 
 {% block header_javascripts %}
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 {% endblock %}
 
 {% block body %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Address Book</h1>
-        </div>
+
+<div class="container main-container">
+    <div class="jumbotron">
+        <h1>Address Book</h1>
+        <p>This project is about developing an address book in which you can add, edit and delete entries. The project should also have an overview of all contacts.</p>
+        <p><a href="https://github.com/tudor-rusu/sym34-address-book" class="btn btn-primary btn-lg" role="button">Github Repository »</a></p>
     </div>
 </div>
 {% endblock %}

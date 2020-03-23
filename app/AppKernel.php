@@ -1,5 +1,6 @@
 <?php
 
+use Knp\Bundle\MenuBundle\KnpMenuBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -18,6 +19,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new AddressBookBundle\AddressBookBundle(),
+            new KnpMenuBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

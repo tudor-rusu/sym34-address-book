@@ -1,3 +1,13 @@
+## [0.1.1] - 2020-03-23
+
+### Added
+- files related to bundle frontend using [Bootstrap 3.2.0][1]
+- add menu using [Knp Menu Bundle][2] 
+
+### Modified
+- composer.json and composer.lock
+- AppKernel.php
+
 ## [0.1.0] - 2020-03-23
 
 ### Added
@@ -18,3 +28,6 @@
 ### Added
 - README.md, LICENSE and CHANGELOG.md
 - initial commit
+
+[1]:  https://bootstrapdocs.com/v3.2.0/docs/getting-started/
+[2]:  https://github.com/KnpLabs/KnpMenuBundle
