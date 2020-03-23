@@ -5,7 +5,8 @@
     "description": "Simple Address Book with Symfony 3.4.*",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "AppBundle\\": "src/AppBundle",
+            "AddressBookBundle\\": "src/AddressBookBundle"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
