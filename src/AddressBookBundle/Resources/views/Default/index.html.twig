@@ -1,14 +1,11 @@
-{% extends 'base.html.twig' %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-{% endblock %}
+{% extends "AddressBookBundle::base.html.twig" %}
 
 {% block body %}
 <div class="container main-container">
     <div class="jumbotron">
         <h1>Address Book</h1>
         <p>This project is about developing an address book in which you can add, edit and delete entries. The project should also have an overview of all contacts.</p>
+        <p>In order to manage contacts, user need to <a href="/login">Login</a> or <a href="/register">Register</a></p>
         <p><a href="https://github.com/tudor-rusu/sym34-address-book" class="btn btn-primary btn-lg" role="button">Github Repository »</a></p>
     </div>
 </div>

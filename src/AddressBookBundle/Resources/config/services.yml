@@ -2,3 +2,9 @@ services:
     AddressBookBundle\DataFixtures\ORM\:
         resource: '../../../../src/AddressBookBundle/DataFixtures/ORM'
         tags: ['doctrine.fixture.orm']
+
+    AddressBookBundle\Controller\RegisterController:
+        arguments: ['@Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface', '@Doctrine\ORM\EntityManagerInterface']
+        calls:
+            - [registerAction, ['@?']]
+            - [setContainer, ['@service_container']]
