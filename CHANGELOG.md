@@ -1,3 +1,12 @@
+## [0.2.2] - 2020-03-24
+
+### Added
+- add Contacts entity
+- set relationship ManyToOne / OneToMany between User and Contact
+
+### Modified
+- data migrations
+
 ## [0.2.1] - 2020-03-23
 
 ### Added

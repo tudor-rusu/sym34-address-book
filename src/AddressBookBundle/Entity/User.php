@@ -2,6 +2,8 @@
 
 namespace AddressBookBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -47,6 +49,18 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AddressBookBundle\Entity\Contact", mappedBy="user")
+     */
+    private $contacts;
+
+    /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        $this->contacts = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -155,5 +169,38 @@ class User implements UserInterface
     {
         // TODO: Implement eraseCredentials() method.
     }
-}
 
+    /**
+     * Add contact
+     *
+     * @param Contact $contact
+     *
+     * @return User
+     */
+    public function addContact(Contact $contact)
+    {
+        $this->contacts[] = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Remove contact
+     *
+     * @param Contact $contact
+     */
+    public function removeContact(Contact $contact)
+    {
+        $this->contacts->removeElement($contact);
+    }
+
+    /**
+     * Get contacts
+     *
+     * @return Collection
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+}
