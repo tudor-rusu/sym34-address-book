@@ -1,3 +1,15 @@
+## [0.3.0] - 2020-03-25
+
+### Added
+- add Contacts CRUD
+- set views and style
+- add pagination [KnpPaginatorBundle][3]
+- add services
+
+### Modified
+- composer files
+- fix dependency injection and some twig templates
+
 ## [0.2.2] - 2020-03-24
 
 ### Added
@@ -60,3 +72,4 @@
 
 [1]:  https://bootstrapdocs.com/v3.2.0/docs/getting-started/
 [2]:  https://github.com/KnpLabs/KnpMenuBundle
+[3]:  https://github.com/KnpLabs/KnpPaginatorBundle

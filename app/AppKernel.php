@@ -3,6 +3,7 @@
 use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
 use Knp\Bundle\MenuBundle\KnpMenuBundle;
+use Knp\Bundle\PaginatorBundle\KnpPaginatorBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -23,7 +24,8 @@ class AppKernel extends Kernel
             new AddressBookBundle\AddressBookBundle(),
             new KnpMenuBundle(),
             new DoctrineFixturesBundle(),
-            new DoctrineMigrationsBundle()
+            new DoctrineMigrationsBundle(),
+            new KnpPaginatorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

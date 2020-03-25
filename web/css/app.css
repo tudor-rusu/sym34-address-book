@@ -2,18 +2,24 @@
 	padding-top: 60px;
 }
 
-#registration-form #user > div {
+#registration-form #user > div,
+#add-contact-form #addressbookbundle_contact > div,
+#edit-contact-form #addressbookbundle_contact > div {
 	float: left;
 	width: 100%;
 	margin-right: -15px;
 	margin-left: -15px;
 	margin-bottom: 15px;
 }
-#registration-form #user > div:before {
+#registration-form #user > div:before,
+#add-contact-form #addressbookbundle_contact > div:before,
+#edit-contact-form #addressbookbundle_contact > div:before {
 	display: table;
 	content: " ";
 }
-#registration-form #user > div > label {
+#registration-form #user > div > label,
+#add-contact-form #addressbookbundle_contact > div > label,
+#edit-contact-form #addressbookbundle_contact > div > label {
 	padding-top: 7px;
 	margin-bottom: 0;
 	text-align: right;
@@ -27,7 +33,16 @@
 #user_username,
 #user_email,
 #user_password_first,
-#user_password_second {
+#user_password_second,
+#addressbookbundle_contact_firstname,
+#addressbookbundle_contact_lastname,
+#addressbookbundle_contact_address,
+#addressbookbundle_contact_zip,
+#addressbookbundle_contact_city,
+#addressbookbundle_contact_country,
+#addressbookbundle_contact_phonenumber,
+#addressbookbundle_contact_birthday,
+#addressbookbundle_contact_email {
 	width: 41.66666667%;
 	float: left;
 	position: relative;
@@ -56,6 +71,9 @@
 }
 #user_submit {
 	margin-left: 16.66666667%;
+}
+.btn-back-to-list {
+	padding-left: 0 !important;
 }
 
 /* Sticky footer styles

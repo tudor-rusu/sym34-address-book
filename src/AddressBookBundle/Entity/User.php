@@ -171,7 +171,7 @@ class User implements UserInterface
     }
 
     /**
-     * Add contact
+     * Add Contact
      *
      * @param Contact $contact
      *
@@ -185,7 +185,7 @@ class User implements UserInterface
     }
 
     /**
-     * Remove contact
+     * Remove Contact
      *
      * @param Contact $contact
      */

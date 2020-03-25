@@ -30,6 +30,7 @@ class Builder implements ContainerAwareInterface
 
         if (is_object($user)) {
             $menu->addChild('Logout', ['route' => 'logout']);
+            $menu->addChild('Add new contact', ['route' => 'contact_new']);
         } else {
             $menu->addChild('Login', ['route' => 'login']);
             $menu->addChild('Register', ['route' => 'register']);

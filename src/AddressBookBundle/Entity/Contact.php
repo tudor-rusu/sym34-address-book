@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Contact
  *
- * @ORM\Table(name="contact")
+ * @ORM\Table(name="Contact")
  * @ORM\Entity(repositoryClass="AddressBookBundle\Repository\ContactRepository")
  * @UniqueEntity(fields={"email"}, message="This one is already taken.")
  */
