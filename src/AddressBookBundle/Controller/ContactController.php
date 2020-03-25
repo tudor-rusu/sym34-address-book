@@ -75,7 +75,7 @@ class ContactController extends Controller
         $result = $paginator->paginate(
             $contacts,
             $request->query->getInt('page', 1),
-            $request->query->getInt('limit', 10)
+            $request->query->getInt('limit', 5)
         );
 
         return $this->render('AddressBookBundle:Contact:index.html.twig', array(
