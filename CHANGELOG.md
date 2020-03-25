@@ -1,3 +1,12 @@
+## [1.0.0] - 2020-03-25
+
+### Modified
+- fix Contact entity
+- update CHANGELOG and README 
+
+### Removed
+- data migrations
+
 ## [0.9.0] - 2020-03-25
 
 ### Added
